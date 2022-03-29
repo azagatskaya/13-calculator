@@ -48,18 +48,3 @@ function calc() {
 
   document.getElementById("result").innerText = res;
 }
-
-// function multiply(a, b) {
-// 	return a * b;
-// }
-
-// let mltp = function (a, b) {
-// 	return a * b;
-// };
-
-// let multi = (a, b) => {
-// 	a * b;
-// 	console.log(a * b)
-// }
-// let res = multi(2, 3);
-// console.log(res);
