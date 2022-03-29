@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="./css/style.css">
+	
+</head>
+
+<body>
+	<div class="calculator">
+		<div class="row">
+			<input class="operands" id="operand--1" type="number">
+			<div class="operators__wrapper">
+				<button class="operator" onclick="select(this)" name="add">+</button>
+				<button class="operator" onclick="select(this)" name="subtract">-</button>
+				<button class="operator" onclick="select(this)" name="multiply">*</button>
+				<button class="operator" onclick="select(this)" name="divide">/</button>
+			</div>
+			<input class="operands" id="operand--2" type="number">
+		</div>
+		<div class="row result">
+			<div class="result__buttons-wrapper">
+				<button class="result__buttons" onclick="calc()">=</button>
+				<button class="result__buttons" onclick="reset()">Сброс</button>
+			</div>
+			<div class="result__window">
+				<span id="result">Ответ</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
