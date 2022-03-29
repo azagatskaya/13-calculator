@@ -42,7 +42,7 @@ function calc() {
       res = a / b;
       break;
     default:
-      alert("Выберите одно действие");
+      alert("Ошибка...");
       break;
   }
 
