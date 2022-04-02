@@ -1,8 +1,17 @@
 "use strict";
 
-function select(sender) {
+document.querySelector(".result-btn").onclick = calc;
+document.querySelector(".reset-btn").onclick = reset;
+
+let operators = document.querySelectorAll(".operator");
+operators.forEach((e) => {
+  e.addEventListener("click", select);
+});
+
+function select() {
   resetSelected();
-  sender.classList.add("selected");
+  this.classList.add("selected");
+  console.log(this);
 }
 
 function reset() {
@@ -12,9 +21,9 @@ function reset() {
 
 function resetSelected() {
   let selectedBtns = document.querySelectorAll(".selected");
-   selectedBtns.forEach(element => {
-     element.classList.remove("selected");
-   }); 
+  selectedBtns.forEach((element) => {
+    element.classList.remove("selected");
+  });
 }
 
 function resetValues() {
@@ -39,7 +48,7 @@ function calc() {
       res = a * b;
       break;
     case "divide":
-      (b === 0) ? res = "На 0 делить нельзя" : res = a / b;
+      b === 0 ? (res = "На 0 делить нельзя") : (res = a / b);
       break;
     default:
       alert("Ошибка...");

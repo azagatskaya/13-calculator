@@ -15,17 +15,17 @@
 		<div class="row">
 			<input class="operands" id="operand--1" type="number">
 			<div class="operators__wrapper">
-				<button class="operator" onclick="select(this)" name="add">+</button>
-				<button class="operator" onclick="select(this)" name="subtract">-</button>
-				<button class="operator" onclick="select(this)" name="multiply">*</button>
-				<button class="operator" onclick="select(this)" name="divide">/</button>
+				<button class="operator" name="add">+</button>
+				<button class="operator" name="subtract">-</button>
+				<button class="operator" name="multiply">*</button>
+				<button class="operator" name="divide">/</button>
 			</div>
 			<input class="operands" id="operand--2" type="number">
 		</div>
 		<div class="row result">
 			<div class="result__buttons-wrapper">
-				<button class="result__buttons" onclick="calc()">=</button>
-				<button class="result__buttons" onclick="reset()">Сброс</button>
+				<button class="result__buttons result-btn">=</button>
+				<button class="result__buttons reset-btn">Сброс</button>
 			</div>
 			<div class="result__window">
 				<span id="result">Ответ</span>
