@@ -11,10 +11,10 @@ function reset() {
 }
 
 function resetSelected() {
-  let selectedBtns = document.getElementsByClassName("selected");
-  while (0 < selectedBtns.length) {
-    selectedBtns[0].classList.remove("selected");
-  }
+  let selectedBtns = document.querySelectorAll(".selected");
+   selectedBtns.forEach(element => {
+     element.classList.remove("selected");
+   }); 
 }
 
 function resetValues() {
@@ -39,7 +39,7 @@ function calc() {
       res = a * b;
       break;
     case "divide":
-      res = a / b;
+      (b === 0) ? res = "На 0 делить нельзя" : res = a / b;
       break;
     default:
       alert("Ошибка...");

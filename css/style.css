@@ -116,12 +116,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color:rgb(74, 125, 126);
   box-shadow: inset 2px 2px 2px grey;
 }
-
-.result-window {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .result__buttons {
   height: 45px;
   width: 90px;
@@ -137,13 +131,15 @@ button {
   color: #FFFFFB;
   border: 1 solid grey;
   border-radius: 3px;
-
 }
 .result-window {
-  border: 10px solid red !important;
   height: 93px;
   width: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#result{
+  display: block;
+  text-align: right;
 }
