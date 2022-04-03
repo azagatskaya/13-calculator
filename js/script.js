@@ -11,7 +11,6 @@ operators.forEach((e) => {
 function select() {
   resetSelected();
   this.classList.add("selected");
-  console.log(this);
 }
 
 function reset() {
