@@ -1,5 +1,20 @@
 "use strict";
 
+class Calculator {
+  static add(a, b) {
+    return a + b;
+  }
+  static subtract(a, b) {
+    return a - b;
+  }
+  static multiply(a, b) {
+    return a * b;
+  }
+  static divide(a, b) {
+    return (b === 0) ? "На 0 делить нельзя" : (a / b);
+  }
+}
+
 document.querySelector(".result-btn").onclick = calc;
 document.querySelector(".reset-btn").onclick = reset;
 
@@ -30,6 +45,7 @@ function resetValues() {
   document.getElementById("operand--2").value = null;
   document.getElementById("result").innerText = null;
 }
+
 function calc() {
   let selectedBtn = document.getElementsByClassName("selected");
   let a = Number(document.getElementById("operand--1").value);
@@ -38,16 +54,16 @@ function calc() {
 
   switch (selectedBtn[0].name) {
     case "add":
-      res = a + b;
+      res = Calculator.add(a, b);
       break;
     case "subtract":
-      res = a - b;
+      res = Calculator.subtract(a, b);
       break;
     case "multiply":
-      res = a * b;
+      res = Calculator.multiply(a, b);
       break;
     case "divide":
-      b === 0 ? (res = "На 0 делить нельзя") : (res = a / b);
+      res = Calculator.divide(a, b);
       break;
     default:
       alert("Ошибка...");
